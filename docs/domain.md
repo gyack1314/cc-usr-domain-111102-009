@@ -3,3 +3,5 @@
 donations与expenses各自以id为主键，amount为非负整数分，day为YYYY-MM-DD，donor是捐助者身份；每条事实含region且只属于一个region。两张project桥各含fact_id、project、numerator、denominator，精确有理权重。无桥事实归unassigned且权重1。查询维度day可归month，另有region及project；null单值维度使用独立null成员，和字符串unassigned不同。sum/count结果保留约分后的有理数，展示金额需最后一步舍入，不在分摊时丢精度。count_distinct仅donor，expense不可用。filters为各登记维度等值集合的合取，过滤发生在各自事实桥展开后且不重归权重。
 
 全部资料为本地合成。samples保留来源状态，读取和存档不等于业务验证通过；异常记录不被自动修改。workbench/domain.py中的现有函数可独立调用，tests/domain_checks.py演示其行为。
+
+指标查询不在本文件直接拼接SQL，而由语义目录与编译层处理，固定口径、计划绑定与核对方式见docs/compilation.md。

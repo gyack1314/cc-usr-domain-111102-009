@@ -12,6 +12,12 @@
     "field": "amount"
   },
   {
+    "id": "gifts",
+    "fact": "donations",
+    "op": "count",
+    "field": "id"
+  },
+  {
     "id": "donors",
     "fact": "donations",
     "op": "count_distinct",

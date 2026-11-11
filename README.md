@@ -10,11 +10,20 @@
 python -m workbench.cli inspect samples
 python -m workbench.cli ingest samples state/raw.sqlite3
 python -m workbench.cli catalog state/raw.sqlite3
+python -m workbench.seed state/facts.sqlite3
+python -m workbench.cli validate samples state/facts.sqlite3
+python -m workbench.cli compile samples monthly output/monthly.plan.json
+python -m workbench.cli explain output/monthly.plan.json
+python -m workbench.cli run samples state/facts.sqlite3 output/monthly.plan.json output/monthly.result.json
 python -m unittest discover -s tests -v
 python -m compileall -q workbench tests
 ```
 
 inspect查看文件行数和摘要；ingest将原始包放入SQLite；catalog列出原始包。测试覆盖已有资料读取、存档幂等及领域原语，compileall检查源码编译。业务计算不会由存档命令自动执行。
+
+## 粒度安全编译层
+
+`validate`检查桥表引用完整性、重复边与权重和；`compile`把samples/queries.json中的受限JSON查询编译成绑定语义目录摘要的参数化SQL计划；`explain`输出可读计算计划但不执行；`run`复核目录摘要后执行，输出指标结果与按分组展开原事实ID、权重的drill核对区。编译与执行分离，目录变化后旧计划被拒绝。口径与样本对照见docs/compilation.md。
 
 ## 容器
 

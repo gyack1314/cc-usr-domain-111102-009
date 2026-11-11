@@ -9,8 +9,45 @@
     "metrics": [
       "donated",
       "spent",
+      "gifts",
       "donors",
       "ratio"
+    ],
+    "start": "2026-10-01",
+    "end": "2026-12-01"
+  },
+  {
+    "id": "monthly_overall",
+    "group_by": [
+      "month"
+    ],
+    "filters": {},
+    "metrics": [
+      "donated",
+      "spent",
+      "gifts",
+      "donors",
+      "ratio"
+    ],
+    "start": "2026-10-01",
+    "end": "2026-12-01"
+  },
+  {
+    "id": "project_p1_only",
+    "group_by": [
+      "month",
+      "project"
+    ],
+    "filters": {
+      "project": [
+        "P1"
+      ]
+    },
+    "metrics": [
+      "donated",
+      "spent",
+      "gifts",
+      "donors"
     ],
     "start": "2026-10-01",
     "end": "2026-12-01"
