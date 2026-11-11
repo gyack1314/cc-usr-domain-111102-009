@@ -1,0 +1,26 @@
+[
+  {
+    "id": "donated",
+    "fact": "donations",
+    "op": "sum",
+    "field": "amount"
+  },
+  {
+    "id": "spent",
+    "fact": "expenses",
+    "op": "sum",
+    "field": "amount"
+  },
+  {
+    "id": "donors",
+    "fact": "donations",
+    "op": "count_distinct",
+    "field": "donor"
+  },
+  {
+    "id": "ratio",
+    "op": "ratio",
+    "numerator": "spent",
+    "denominator": "donated"
+  }
+]

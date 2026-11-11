@@ -1,0 +1,23 @@
+[
+  {
+    "id": "d1",
+    "day": "2026-10-01",
+    "region": "east",
+    "donor": "A",
+    "amount": 101
+  },
+  {
+    "id": "d2",
+    "day": "2026-10-02",
+    "region": "east",
+    "donor": "A",
+    "amount": 200
+  },
+  {
+    "id": "d3",
+    "day": "2026-11-01",
+    "region": null,
+    "donor": "B",
+    "amount": 300
+  }
+]

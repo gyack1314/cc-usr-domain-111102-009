@@ -1,0 +1,20 @@
+[
+  {
+    "fact_id": "e1",
+    "project": "P1",
+    "numerator": 1,
+    "denominator": 1
+  },
+  {
+    "fact_id": "e2",
+    "project": "P2",
+    "numerator": 1,
+    "denominator": 1
+  },
+  {
+    "fact_id": "e3",
+    "project": "P3",
+    "numerator": 1,
+    "denominator": 1
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "monthly",
+    "group_by": [
+      "month",
+      "project"
+    ],
+    "filters": {},
+    "metrics": [
+      "donated",
+      "spent",
+      "donors",
+      "ratio"
+    ],
+    "start": "2026-10-01",
+    "end": "2026-12-01"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "name": "公益运营多事实指标的粒度安全编译",
+  "files": [
+    {
+      "path": "donations.json"
+    },
+    {
+      "path": "expenses.json"
+    },
+    {
+      "path": "donation_projects.json"
+    },
+    {
+      "path": "expense_projects.json"
+    },
+    {
+      "path": "metrics.json"
+    },
+    {
+      "path": "queries.json"
+    }
+  ]
+}
